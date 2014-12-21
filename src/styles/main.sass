@@ -1,9 +1,53 @@
 @import 'reset'
 
+=border-radius($radius)
+	-webkit-border-radius: $radius
+	-moz-border-radius:    $radius
+	-ms-border-radius:     $radius
+	border-radius:         $radius
+
 $font-stack:    Helvetica, sans-serif
-$primary-color: #333
+
+//Colors
+$blue-grey-500: #607D8B
+$secondary: #FF5722
 
 body
-  font: 100% $font-stack
-  color: $primary-color
+	font: 
+		size: 100% 
+		family: $font-stack
+	color: #333
+	+border-radius(10px)
 
+.container
+	display: flex
+	height: 100vh
+	width: 100%
+
+article[role="main"]
+	padding: 48px
+
+aside[role="complimentary"]
+	width: 300px / 960px * 100%
+	background: $blue-grey-500
+
+	ul
+		li
+			padding: 24px
+		a
+			font-size: 24px
+			color: white
+			text-decoration: none
+			&:hover
+				color: $secondary
+
+.message
+	border: 1px solid #ccc
+	padding: 10px
+	color: #333
+	&:hover
+		color: red
+
+.success
+	@extend .message
+	border-color: green

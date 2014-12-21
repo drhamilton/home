@@ -5,13 +5,51 @@ ol {
   margin: 0;
   padding: 0; }
 
+ul {
+  list-style: none; }
+
 *,
 *:after,
 *:before {
   box-sizing: border-box; }
 
 body {
-  font: 100% Helvetica, sans-serif;
+  font-size: 100%;
+  font-family: Helvetica, sans-serif;
+  color: #333;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px; }
+
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100%; }
+
+article[role="main"] {
+  padding: 48px; }
+
+aside[role="complimentary"] {
+  width: 31.25%;
+  background: #607D8B; }
+  aside[role="complimentary"] ul li {
+    padding: 24px; }
+  aside[role="complimentary"] ul a {
+    font-size: 24px;
+    color: white;
+    text-decoration: none; }
+    aside[role="complimentary"] ul a:hover {
+      color: #FF5722; }
+
+.message, .success {
+  border: 1px solid #ccc;
+  padding: 10px;
   color: #333; }
+  .message:hover, .success:hover {
+    color: red; }
+
+.success {
+  border-color: green; }
 
 /*# sourceMappingURL=main.css.map */
